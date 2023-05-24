@@ -1,33 +1,31 @@
 #include<stdio.h>
 int main()
 {
-    int n,r,i=0;
+    int n,r,f,s,t,l;
     scanf("%d",&n);
-    int x=n,count=0;
-    while(x)
-    {
-        count++;
-        r=x%10;
-        x=x/10;
-    }
-    int arr[count];
-    while(n)
-    {
-        r=n%10;
-        arr[i]=r;
-        i++;
+        l=n%10;//r=9
+        n=n/10;//n=966
+        t=n%10;
         n=n/10;
-    }
-    for(i=count-1;i>=0;i--)
-    {
-        if(arr[i]==6)
+        s=n%10;
+        n=n/10;
+        f=n%10;
+        n=n/10;
+        if(f==6)
         {
-            arr[i]=9;
-            break;
+            f=9;
         }
-    }
-    for(i=count-1;i>=0;i--)
-    {
-        printf("%d",arr[i]);
-    }
+        else if(s==6)
+        {
+            s=9;
+        }
+        else if(t==6)
+        {
+            t=9;
+        }
+        else if(l==6)
+        {
+            l=9;
+        }
+        printf("%d%d%d%d",f,s,t,l);
 }
