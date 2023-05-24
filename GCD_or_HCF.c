@@ -1,19 +1,24 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
-    int a,b;
-    scanf("%d%d",&a,&b);
-    while(a!=b)
-    {
-        if(a>b)
-        {
-            a-=b;
-        }
-        else if(b>a)
-        {
-            b-=a;
-        }
-    }
-    printf("%d",a);
+	int i,a,b,x,y,hcf;
+	scanf("%d%d",&a,&b);
+	if(a>b)
+	{
+		x=a;
+		y=b;
+	}
+	else
+	{
+		x=b;
+		y=a;
+	}
+	for(i=1;i<=y;i++)
+	{
+		if(x%i==0 && y%i==0)
+		{
+			hcf=i;
+		}
+	}
+	printf("%d",hcf);
 }
